@@ -1,6 +1,21 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
+import "./Token.sol";
+
 contract Crowdsale {
-    string public name = "Crowdsale";
+    Token public token;
+    uint256 public price;
+
+    // Need Code
+    // Need Address
+    constructor(Token _token, uint256 _price) {
+        token = _token;
+        price = _price;
+    }
+
+    function buyTokens(uint256 _amount) public payable {
+        msg.value;
+        token.transfer(msg.sender, _amount);
+    }
 }
